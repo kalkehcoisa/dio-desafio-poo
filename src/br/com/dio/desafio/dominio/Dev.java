@@ -19,16 +19,15 @@ public class Dev {
         bootcamp.getDevsInscritos().add(this);
     }
 
-    public void progredir() {
+    public Conteudo progredir() {
         Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
 
         if (conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
-            System.out.println("\tConteúdo concluído: " + conteudo.get());
-        } else {
-            System.out.println("\tVocê não está matriculado em nenhum conteúdo!");
+            return conteudo.get();
         }
+        return null;
     }
 
     public double calcularTotalXp() {

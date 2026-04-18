@@ -83,16 +83,19 @@ public class Main {
             for (Object[] acao : listaAcoes) {
                 String tipo = (String) acao[0];
                 Bootcamp bootcamp = (Bootcamp) acao[1];
-                if (bootcamp != null) {
-                    System.out.println(bootcamp.getNome());
-                }
 
                 switch (tipo) {
                     case "inscrever":
+                        System.out.println("\tInscreveu-se em: " + bootcamp.getNome());
                         dev.inscreverBootcamp(bootcamp);
                         break;
                     case "progredir":
-                        dev.progredir();
+                        Conteudo c = dev.progredir();
+                        if(c != null) {
+                            System.out.println("\tConcluiu: " + c);
+                        } else {
+                            System.out.println("\tTentou progredir, mas não tem mais conteúdos para estudar!");
+                        }
                         break;
                 }
             }
