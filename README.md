@@ -1,6 +1,3 @@
-# README.md
-
-````md
 # Desafio: Aprendendo na Prática Programação Orientada a Objetos
 
 Projeto desenvolvido em Java para praticar os quatro pilares da Programação Orientada a Objetos:
@@ -71,7 +68,7 @@ Cada bootcamp possui:
 Os desenvolvedores são executados a partir de um mapa de ações:
 
 ```java
-Map<String, List<Object[]>> acoes
+Map<String, List<Object[]>> acoes;
 ```
 
 Cada entrada representa um desenvolvedor e a sequência de ações que ele executará.
